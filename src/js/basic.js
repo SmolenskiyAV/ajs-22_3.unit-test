@@ -5,3 +5,20 @@ export default function sum(items) {
   }
   return result;
 }
+
+// реализовываем функцию индикации здоровья
+export function healthIndication({name: name, health: health}) {
+  if (health > 50) return `${name}: healthy`;
+  if ((health <= 50) && (health >= 15)) return `${name}: wounded`;
+  if (health < 15) return `${name}: critical`;
+}
+
+//сортировка массива по величине здоровья героя
+export function sortArray(arr) {
+  return (
+    arr.reverse(
+    (a, b) => a.health - b.health
+    )
+  )
+}
+
