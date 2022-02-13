@@ -16,8 +16,8 @@ export function healthIndication({name: name, health: health}) {
 //сортировка массива по величине здоровья героя
 export function sortArray(arr) {
   return (
-    arr.reverse(
-    (a, b) => a.health - b.health
+    arr.sort(
+    (a, b) => b.health - a.health
     )
   )
 }
